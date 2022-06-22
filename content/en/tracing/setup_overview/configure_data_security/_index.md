@@ -15,6 +15,8 @@ aliases:
 
 The performance data and traces that you're collecting with Datadog can contain sensitive information that you want to filter out, obfuscate, scrub, filter, modify, or just not collect.  Additionally, it may contain synthetic traffic that might cause your error counts to be inaccurate or Datadog to not accurately indicate the health of your services.
 
+In the latest versions of the library Datadog has increased to the scope of data collected to help clients debug and secure their applications. This includes automatically collecting query string and the clients ip in web request spans. This information is very helpful in understanding an applications behaviour but can also increase the risk of sentative data being collected. To mitigate this risks, Datadog will automatically scan and scrub this data. The scrubbing is configurable and data collection can be deactivated, if necessary.
+
 The Datadog Agent and some tracing libraries have  options available to address these situations and modify or discard spans, and various options are described below.  These docs cover several common methods for configuring Tracer and Agent to achieve these security requirements.
 
 If your fine-tuning needs aren't covered and you need assistance, reach out to [the Datadog support team][1].
