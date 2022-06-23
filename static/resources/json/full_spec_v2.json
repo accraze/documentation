@@ -21810,11 +21810,16 @@
         "default": "deflate",
         "description": "HTTP header used to compress the media-type.",
         "enum": [
-          "deflate"
+          "zstd1",
+          "deflate",
+          "gzip"
         ],
+        "example": "deflate",
         "type": "string",
         "x-enum-varnames": [
-          "DEFLATE"
+          "ZSTD1",
+          "DEFLATE",
+          "GZIP"
         ]
       },
       "MetricCustomAggregation": {
@@ -22280,13 +22285,12 @@
         ]
       },
       "MetricIntakeType": {
-        "description": "The type of metric.",
+        "description": "The type of metric. The available types are 0(unspecified), 1(count), 2(rate), 3(gauge)",
         "enum": [
           0,
           1,
           2,
-          3,
-          15
+          3
         ],
         "format": "int32",
         "type": "integer",
@@ -22294,8 +22298,7 @@
           "UNSPECIFIED",
           "COUNT",
           "RATE",
-          "GAUGE",
-          "UNSPECIFIED_LEGACY"
+          "GAUGE"
         ]
       },
       "MetricMetadata": {
@@ -22485,13 +22488,12 @@
                   "type": "array"
                 },
                 "type": {
-                  "description": "The type of metric.",
+                  "description": "The type of metric. The available types are 0(unspecified), 1(count), 2(rate), 3(gauge)",
                   "enum": [
                     0,
                     1,
                     2,
-                    3,
-                    15
+                    3
                   ],
                   "format": "int32",
                   "type": "integer",
@@ -22499,8 +22501,7 @@
                     "UNSPECIFIED",
                     "COUNT",
                     "RATE",
-                    "GAUGE",
-                    "UNSPECIFIED_LEGACY"
+                    "GAUGE"
                   ]
                 },
                 "unit": {
@@ -22663,13 +22664,12 @@
             "type": "array"
           },
           "type": {
-            "description": "The type of metric.",
+            "description": "The type of metric. The available types are 0(unspecified), 1(count), 2(rate), 3(gauge)",
             "enum": [
               0,
               1,
               2,
-              3,
-              15
+              3
             ],
             "format": "int32",
             "type": "integer",
@@ -22677,8 +22677,7 @@
               "UNSPECIFIED",
               "COUNT",
               "RATE",
-              "GAUGE",
-              "UNSPECIFIED_LEGACY"
+              "GAUGE"
             ]
           },
           "unit": {
@@ -77335,11 +77334,16 @@
               "default": "deflate",
               "description": "HTTP header used to compress the media-type.",
               "enum": [
-                "deflate"
+                "zstd1",
+                "deflate",
+                "gzip"
               ],
+              "example": "deflate",
               "type": "string",
               "x-enum-varnames": [
-                "DEFLATE"
+                "ZSTD1",
+                "DEFLATE",
+                "GZIP"
               ]
             }
           }
@@ -77479,13 +77483,12 @@
                           "type": "array"
                         },
                         "type": {
-                          "description": "The type of metric.",
+                          "description": "The type of metric. The available types are 0(unspecified), 1(count), 2(rate), 3(gauge)",
                           "enum": [
                             0,
                             1,
                             2,
-                            3,
-                            15
+                            3
                           ],
                           "format": "int32",
                           "type": "integer",
@@ -77493,8 +77496,7 @@
                             "UNSPECIFIED",
                             "COUNT",
                             "RATE",
-                            "GAUGE",
-                            "UNSPECIFIED_LEGACY"
+                            "GAUGE"
                           ]
                         },
                         "unit": {
@@ -91446,7 +91448,7 @@
       "name": "Metrics"
     },
     {
-      "description": "Configure your [Datadog Opsgenie integration](https://docs.datadoghq.com/integrations/opsgenie/)\ndirectly through the Datadog API.",
+      "description": "Configure your [Datadog Opsgenie integration](https://docs.datadoghq.com/api/latest/opsgenie-integration)\ndirectly through the Datadog API.",
       "externalDocs": {
         "url": "https://docs.datadoghq.com/api/latest/opsgenie-integration"
       },
