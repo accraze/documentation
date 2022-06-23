@@ -40,10 +40,7 @@
       "applicationId": "mockApplicationId",
       "clientTokenId": 123456
     },
-    "tick_every": 300,
-    "ci": {
-      "executionRule": "skipped"
-    }
+    "tick_every": 300
   },
   "tags": [
     "testing:browser"
